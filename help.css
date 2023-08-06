@@ -1,0 +1,268 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style checkboxes */
+input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Adjust label position for checkboxes */
+.form-group label {
+  display: flex;
+  align-items: center;
+}
+
+/* Center the submit button */
+.form-group.submit-button {
+  text-align: center;
+}
+
+/* Style the Register button */
+button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ /* Add styles for the container */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Add styles for form group labels */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Expand input fields to full width */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* Center the submit button */
+.form-group.submit-button {
+  text-align: center;
+}
+
+/* Expand submit button to full width */
+.form-group.submit-button button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Add styles for interests checkboxes and labels */
+.form-group.interests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+/* Add styles for interests checkboxes */
+.form-group.interests input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+ /* Add styles for the duration dropdown */
+.form-group.interests select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Add styles for the "Other" option input */
+.form-group.interests input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+
+/* Add general styles for the form */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Add specific styles for icons */
+.form-group label i {
+  margin-right: 10px;
+}
+
+/* Adjust the icon size */
+.form-group label i.fa {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* Add media query for better responsiveness on smaller screens */
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* Add general styles for the form */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Add specific styles for icons */
+.form-group label i {
+  margin-right: 10px;
+}
+
+/* Adjust the icon size */
+.form-group label i.fa {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* Add media query for better responsiveness on smaller screens */
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistance Section</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #7eb2df;
+  }
+  
+  .assistance-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box {
+    background-color: #007BFF;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 15px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .box h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .box p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  
+  
+  
+    </style>
+  </head>
+  <body>
+    <div class="assistance-section">
+      <div class="box" onclick="redirectToUserRegister()">
+        <img src="user.avif" alt="User Registration">
+        <h2>User Registration</h2>
+        <p>Register as a user volunteer here.</p>
+      </div>
+  
+      <div class="box" onclick="redirectToNGOsRegister()">
+        <img src="ngos.avif" alt="NGOs Registration">
+        <h2>NGOs Registration</h2>
+        <p>Register your NGO here.</p>
+      </div>
+  
+      <div class="box" onclick="redirectToDonation()">
+        <img src="donation.avif" alt="Donation">
+        <h2>Donation</h2>
+        <p>Help the needy people here.</p>
+      </div>
+    </div>
+  
+    <script>
+      function redirectToUserRegister() {
+        window.location.href = "user_volunteer_registration.html";
+      }
+  
+      function redirectToNGOsRegister() {
+        window.location.href = "ngos_registration.html";
+      }
+  
+      function redirectToDonation() {
+        window.location.href = "donation.html";
+      }
+    </script>
+  </body>
+  </html>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistance Section</title>
+  <link rel="stylesheet" href="help.css">
+</head>
+<body>
+  <div class="assistance-section">
+    <button onclick="openUserVolunteerRegistration()">User Volunteer Registration</button>
+    <button onclick="openNGOsRegistration()">NGOs Registration</button>
+    <button onclick="openDonation()">Donation</button>
+    <div class="user-volunteer-registration-section" style="display: none;">
+      <h2>User Volunteer Registration</h2>
+      <p>Register as a user volunteer here.</p>
+    </div>
+
+    <div class="ngos-registration-section" style="display: none;">
+      <h2>NGOs Registration</h2>
+      <p>Register your NGO here.</p>
+    </div>
+
+    <div class="donation-section" style="display: none;">
+      <h2>Donation</h2>
+      <p>Donate to support assistance initiatives.</p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website with Login & Registration Form</title>
+    <link rel="stylesheet" href="loginstyle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  </head>
+  <body>
+  
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="#"><img src="C:\Users\Admin\Desktop\Nikita\DRRA\drra.final.png" class="drra"> DRRA </a>
+        
+
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a href="#" class="nav_link">Home</a>
+            <a href="aboutus.html" class="nav_link">About.</a>
+            <a href="help.html" class="nav_link">Help.</a>
+            <a href="assistance.html" class="nav_link">Assistance</a>
+            <a href="weatherindex.html" class="nav_link">Weather Forcast</a>
+            <a href="forums.html" class="nav_link">Forums</a>
+            <a href="hazardmap.html" class="nav_link">Hazard maps</a>
+            
+            
+            <div class="Select Language">
+              <div>
+                <select name=""id="">
+                  <option value="English">English</option>
+                  <option value="Hindi">हिंदी</option>
+                  <option value="Bengali">বাংলা</option>
+                  <option value="Marathi">मराठी</option>
+                  <option value="Telgu">తెలుగు</option>
+                </select>
+              
+            </div>
+            </div>
+          </li>
+        </ul>
+
+        <button class="button" id="form-open">Login</button>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home">
+
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="login.php" method="post">
+            <h2>Login</h2>
+
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" name="email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Enter your password" name="password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class="forgot_pw">Forgot password?</a>
+            </div>
+
+            <button class="button">Login Now</button>
+
+            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+          </form>
+        </div>
+
+        <!-- Signup From -->
+        <div class="form signup_form">
+          <form action="#">
+            <h2>Signup</h2>
+
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Create password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Confirm password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <button class="button">Signup Now</button>
+
+            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+          </form>
+        </div>
+      </div>
+      
+    </section>
+    
+    <script src="script.js"></script>
+    <section>
+      PRESS HERE IN CASE OF EMERGENCY
+      <button id="sosButton">SOS</button>
+      <div id="locationInfo"></div>
+      <div id="map" style="height: 300px;">
+      </div>
+    <script>
+      const sosButton = document.getElementById('sosButton');
+  const locationInfo = document.getElementById('locationInfo');
+  sosButton.addEventListener('click', () => {
+  if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+       
+        locationInfo.innerHTML = `Latitude: ${latitude}, Longitude: ${longitude}`;
+
+    var map = L.map('map').setView([latitude,longitude], 30);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+      },
+      (error) => {
+
+        locationInfo.innerHTML = 'Error retrieving location.';
+      }
+    );
+  } else {
+    // Geolocation API is not supported in the user's browser
+    locationInfo.innerHTML = 'Geolocation API is not supported in this browser.';
+  }
+});
+    </script>
+    </section>
+    <form>
+      <div class="contact">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+          <label>
+          <div class ="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+                  I agree to share my location.
+          </label>
+          <div class= "submit">
+              <form action="/submit_handler" method="post">
+                 
+                  <input type="submit" value="Submit">
+              </div>
+          </form>
+      </div>
+  </body>
+</html>
+
